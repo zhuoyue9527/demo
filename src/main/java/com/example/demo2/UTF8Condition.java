@@ -6,7 +6,6 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 
 public class UTF8Condition implements Condition {
 
-	@Override
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
 		String property = System.getProperty("file.encoding");
 		if(property != null){

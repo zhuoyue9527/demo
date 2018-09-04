@@ -6,13 +6,14 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 
 public class GBKCondition implements Condition {
 
-	@Override
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-		String property = System.getProperty("file.encoding");
-		if(property != null){
-			return "gbk".equals(property.toLowerCase());
-		}
-		return false;
+			String property = System.getProperty("file.encoding");
+			if(property != null){
+				return "gbk".equals(property.toLowerCase());
+			}
+			return false;
 	}
+
+	
 
 }
